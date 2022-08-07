@@ -1,10 +1,10 @@
-
 import 'package:eas/screens/bottomnavigationbar.dart';
 import 'package:eas/screens/homepage.dart';
 import 'package:eas/screens/loginPage.dart';
 import 'package:eas/screens/mainpage.dart';
 import 'package:eas/screens/signuppage.dart';
 import 'package:eas/screens/splashscreen.dart';
+import 'package:eas/screens/userswitcher.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'firebase_options.dart';
@@ -25,7 +25,8 @@ class App extends StatelessWidget {
         'login': ((context) => LoginPage()),
         'main': ((context) => const Mainpage()),
         'home': (context) => Home(),
-        'bottomnav':(context) => BottomNav(),
+        'switcher': (context) => Switcher(),
+        'bottomnav': (context) => BottomNav(),
       },
       home: Splashscreen(),
     );

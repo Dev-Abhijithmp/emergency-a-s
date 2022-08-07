@@ -18,7 +18,7 @@ Future<void> onLaunch(context) async {
     if (FirebaseAuth.instance.currentUser == null) {
       Navigator.popAndPushNamed(context, 'main');
     } else {
-      Navigator.popAndPushNamed(context, 'bottomnav');
+      Navigator.popAndPushNamed(context, 'switcher');
     }
   } else {
     ScaffoldMessenger.of(context)
