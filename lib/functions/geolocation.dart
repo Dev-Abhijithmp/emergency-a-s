@@ -40,3 +40,11 @@ Future<Position> determinePosition() async {
   // continue accessing the position of the device.
   return await Geolocator.getCurrentPosition();
 }
+//this function for find two geopoints
+Future<double> getdistance(double startLatitude, double startLongitude,
+    double endLatitude, double endLongitude) async {
+  double data = await Geolocator.distanceBetween(
+      startLatitude, startLongitude, endLatitude, endLongitude);
+  return data;
+}
+//http://www.google.com/maps/place/49.46800006494457,17.11514008755796
