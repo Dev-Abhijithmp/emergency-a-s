@@ -44,6 +44,7 @@ dependencies:
   flutter_neumorphic: ^3.2.0
   sms_advanced: ^1.0.1
   fluttertoast: ^8.0.9
+  permission_handler: ^10.0.0
 
 dev_dependencies:
   flutter_test:
