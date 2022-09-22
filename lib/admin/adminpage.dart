@@ -38,6 +38,7 @@ class _AdminpageState extends State<Adminpage> {
     }
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: MyColors.white,
       appBar: AppBar(
         title: Text(

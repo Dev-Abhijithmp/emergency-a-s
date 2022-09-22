@@ -24,13 +24,13 @@ Future<void> makecall(String number) async {
       : Fluttertoast.showToast(msg: "can't call now");
 }
 
-Future<void> doWhatsappMsg(
-    {required String addess, required String message}) async {
-  Uri url = Uri.parse("https://wa.me/91$addess?text=$message");
-  await canLaunchUrl(url)
-      ? await launchUrl(url)
-      : Fluttertoast.showToast(msg: "can't send whatsapp msg now");
-}
+// Future<void> doWhatsappMsg(
+//     {required String addess, required String message}) async {
+//   Uri url = Uri.parse("https://wa.me/91$addess?text=$message");
+//   await canLaunchUrl(url)
+//       ? await launchUrl(url)
+//       : Fluttertoast.showToast(msg: "can't send whatsapp msg now");
+// }
 
 Future<DocumentSnapshot> findnearest(
     List<DocumentSnapshot> data, Position position) async {

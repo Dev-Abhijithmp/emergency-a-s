@@ -7,13 +7,13 @@ import 'package:google_fonts/google_fonts.dart';
 class Addtofirestore extends StatelessWidget {
   late final String category;
   Addtofirestore({Key? key, required this.category}) : super(key: key);
+  TextEditingController controllerplace = TextEditingController();
+  TextEditingController controllerlat = TextEditingController();
+  TextEditingController controllerlong = TextEditingController();
+  TextEditingController controllernumber = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    TextEditingController controllerplace = TextEditingController();
-    TextEditingController controllerlat = TextEditingController();
-    TextEditingController controllerlong = TextEditingController();
-    TextEditingController controllernumber = TextEditingController();
     return Scaffold(
       backgroundColor: MyColors.white,
       appBar: AppBar(
@@ -55,7 +55,10 @@ class Addtofirestore extends StatelessWidget {
                   margin: EdgeInsets.only(left: 30, top: 5, bottom: 5),
                   child: TextFormField(
                     controller: controllerlat,
-                    inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+                    inputFormatters: [
+                      FilteringTextInputFormatter.singleLineFormatter
+                    ],
+                    keyboardType: TextInputType.number,
                     decoration: InputDecoration(
                       labelText: "latitude",
                       focusedBorder: outlineInputBorder(),
@@ -73,7 +76,9 @@ class Addtofirestore extends StatelessWidget {
                   margin: EdgeInsets.only(left: 10, top: 5, bottom: 5),
                   child: TextFormField(
                     controller: controllerlong,
-                    inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+                    inputFormatters: [
+                      FilteringTextInputFormatter.singleLineFormatter
+                    ],
                     keyboardType: TextInputType.number,
                     decoration: InputDecoration(
                       labelText: "longitude",

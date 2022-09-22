@@ -23,10 +23,12 @@ class Switcher extends StatelessWidget {
           return Loading();
         } else {
           DocumentSnapshot doc = snapshot.data;
+          print(snapshot.data.get('role'));
 
-          if (doc.get('role') == "admin") {
+          if (snapshot.data.get('role') == "admin") {
             return const Adminpage();
           } else {
+            print(doc.get('role'));
             return const BottomNav();
           }
         }
