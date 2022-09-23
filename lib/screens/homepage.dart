@@ -62,7 +62,7 @@ class _HomeState extends State<Home> {
         children: [
           Center(
             child: FutureBuilder<QuerySnapshot>(
-                future: firestore.collection('fireforce').get(),
+                future: firestore.collection('police').get(),
                 builder: (context, AsyncSnapshot snapshot) {
                   if (snapshot.hasData == true) {
                     List<DocumentSnapshot> data = snapshot.data!.docs;
@@ -82,7 +82,7 @@ class _HomeState extends State<Home> {
                               "Hi there, there is an emergency over here http://www.google.com/maps/place/${p.latitude},${p.longitude}");
                           makecall(result.get('number'));
                         },
-                        child: emWidget('fireforce'));
+                        child: emWidget('Police'));
                   } else if (snapshot.hasError == true) {
                     return buttonerror();
                   } else {
